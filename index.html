@@ -117,6 +117,69 @@
         .unit-list li {
             margin-bottom: 10px;
         }
+
+        /* Estilos para temas expandibles */
+        .topic-item {
+            margin-bottom: 10px;
+            border-left: 3px solid #3498db;
+            padding-left: 15px;
+        }
+
+        .topic-title {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topic-title:hover {
+            background-color: #e9ecef;
+        }
+
+        .topic-title::after {
+            content: '+';
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .topic-title.active::after {
+            content: '-';
+        }
+
+        .topic-content {
+            display: none;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+            line-height: 1.6;
+        }
+
+        .topic-content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .main-content {
+                margin-top: 140px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -136,36 +199,118 @@
             <h1>Unidades Académicas</h1>
             
             <h2>UNIDAD 1: FUNDAMENTOS Y EL PENSAMIENTO SISTÉMICO</h2>
-            <ul class="unit-list">
-                <li>1.1. ¿Qué es la ingeniería?</li>
-                <li>1.2. Historia y evolución de la ingeniería de sistemas</li>
-                <li>1.3. Ingeniería de sistemas vs. otras ramas de la ingeniería</li>
-                <li>1.4. ¿Qué problemas resuelve la ingeniería de sistemas?</li>
-                <li>1.5. Enfoque de resolución de problemas y pensamiento sistémico</li>
-                <li>1.6. Introducción al modelado y diagramas de flujo</li>
-                <li>1.7. Conceptos fundamentales de la Teoría General de Sistemas (TGS)</li>
-                <li>1.8. Componentes del sistema y tipos de sistemas de información</li>
-                <li>1.9. La empresa como sistema</li>
-            </ul>
-            
+            <div class="unit-content">
+                <div class="topic-item">
+                    <div class="topic-title">1.1. ¿Qué es la ingeniería?</div>
+                    <div class="topic-content">
+                        <p>La ingeniería es la aplicación de principios científicos y matemáticos para diseñar, construir y mantener estructuras, máquinas, sistemas y procesos. Combina conocimiento teórico con aplicación práctica para resolver problemas del mundo real.</p>
+                        <p><strong>Características principales:</strong></p>
+                        <ul>
+                            <li>Aplicación del método científico</li>
+                            <li>Enfoque en la resolución de problemas</li>
+                            <li>Optimización de recursos</li>
+                            <li>Consideración de aspectos económicos y sociales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-title">1.2. Historia y evolución de la ingeniería de sistemas</div>
+                    <div class="topic-content">
+                        <p>La ingeniería de sistemas surgió como respuesta a la creciente complejidad de los sistemas tecnológicos. Su desarrollo está ligado a:</p>
+                        <ul>
+                            <li><strong>Década de 1940:</strong> Orígenes en proyectos militares complejos</li>
+                            <li><strong>Década de 1950:</strong> Formalización como disciplina</li>
+                            <li><strong>Década de 1960-1970:</strong> Expansión a sistemas empresariales</li>
+                            <li><strong>Década de 1980-presente:</strong> Integración con tecnologías de información</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-title">1.3. Ingeniería de sistemas vs. otras ramas de la ingeniería</div>
+                    <div class="topic-content">
+                        <p><strong>Ingeniería de Sistemas:</strong> Se enfoca en la integración de componentes y subsistemas para crear un sistema completo y funcional.</p>
+                        <p><strong>Otras ingenierías:</strong> Se especializan en componentes específicos (software, hardware, redes, etc.).</p>
+                        <p><strong>Diferencias clave:</strong></p>
+                        <ul>
+                            <li>Enfoque holístico vs. especializado</li>
+                            <li>Integración de múltiples disciplinas</li>
+                            <li>Gestión de complejidad e interdependencias</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-title">1.4. ¿Qué problemas resuelve la ingeniería de sistemas?</div>
+                    <div class="topic-content">
+                        <p>La ingeniería de sistemas aborda problemas complejos como:</p>
+                        <ul>
+                            <li>Integración de sistemas heterogéneos</li>
+                            <li>Optimización de procesos empresariales</li>
+                            <li>Gestión de grandes volúmenes de datos</li>
+                            <li>Automatización de procesos</li>
+                            <li>Mejora de la experiencia del usuario</li>
+                            <li>Reducción de costos operativos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-title">1.5. Enfoque de resolución de problemas y pensamiento sistémico</div>
+                    <div class="topic-content">
+                        <p>El pensamiento sistémico considera los problemas desde una perspectiva holística, analizando las interrelaciones entre componentes en lugar de verlos de forma aislada.</p>
+                        <p><strong>Etapas del enfoque sistémico:</strong></p>
+                        <ol>
+                            <li>Definición del problema y sus límites</li>
+                            <li>Identificación de componentes y relaciones</li>
+                            <li>Análisis de interdependencias</li>
+                            <li>Desarrollo de soluciones integradas</li>
+                            <li>Implementación y evaluación</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Agregar más temas de la Unidad 1 aquí -->
+            </div>
+
             <h2>UNIDAD 2: EL INGENIERO DE SISTEMAS EN CONTEXTO EMPRESARIAL Y SOCIAL</h2>
-            <ul class="unit-list">
-                <li>2.1. El ingeniero de sistemas amigoniano</li>
-                <li>2.2. Perfil del ingeniero amigoniano</li>
-                <li>2.3. Perfiles y roles ocupacionales del ingeniero de sistemas</li>
-                <li>2.4. Impacto social de la tecnología</li>
-                <li>2.6. Netiqueta y comunicación profesional digital</li>
-                <li>2.7. Gestión de archivos y ofimática como herramientas básicas</li>
-            </ul>
-            
+            <div class="unit-content">
+                <div class="topic-item">
+                    <div class="topic-title">2.1. El ingeniero de sistemas amigoniano</div>
+                    <div class="topic-content">
+                        <p>El ingeniero de sistemas con formación amigoniana combina competencias técnicas con valores humanos y sociales, enfocándose en el servicio a la comunidad y el desarrollo integral.</p>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-title">2.2. Perfil del ingeniero amigoniano</div>
+                    <div class="topic-content">
+                        <p>Profesional con sólida formación técnica, capacidad crítica, compromiso social y valores éticos, que contribuye al desarrollo sostenible de la sociedad.</p>
+                    </div>
+                </div>
+
+                <!-- Agregar más temas de la Unidad 2 aquí -->
+            </div>
+
             <h2>UNIDAD 3: EVOLUCIÓN DE LAS TIC Y SISTEMAS INFORMÁTICOS</h2>
-            <ul class="unit-list">
-                <li>3.1. Las TIC desde el punto de vista del ingeniero de sistemas</li>
-                <li>3.2. Introducción a los sistemas computacionales como sistema</li>
-                <li>3.3. Evolución del hardware y el software en los últimos 20 años</li>
-                <li>3.4. Inteligencia Artificial: conceptos básicos y tendencias</li>
-                <li>3.5. Mirada actual de los sistemas de información</li>
-            </ul>
+            <div class="unit-content">
+                <div class="topic-item">
+                    <div class="topic-title">3.1. Las TIC desde el punto de vista del ingeniero de sistemas</div>
+                    <div class="topic-content">
+                        <p>Las Tecnologías de la Información y Comunicación son herramientas fundamentales que el ingeniero de sistemas utiliza para diseñar, implementar y gestionar soluciones tecnológicas.</p>
+                    </div>
+                </div>
+
+                <div class="topic-item">
+                    <div class="topic-title">3.2. Introducción a los sistemas computacionales como sistema</div>
+                    <div class="topic-content">
+                        <p>Los sistemas computacionales son conjuntos integrados de hardware, software y recursos humanos que trabajan conjuntamente para procesar información y apoyar la toma de decisiones.</p>
+                    </div>
+                </div>
+
+                <!-- Agregar más temas de la Unidad 3 aquí -->
+            </div>
         </section>
 
         <section id="crud" class="section">
@@ -184,6 +329,7 @@
     </main>
 
     <script>
+        // Navegación entre secciones
         document.querySelectorAll('.nav-btn').forEach(button => {
             button.addEventListener('click', function() {
                 const sectionId = this.getAttribute('data-section');
@@ -193,6 +339,23 @@
                 });
                 
                 document.getElementById(sectionId).classList.add('active');
+            });
+        });
+
+        // Funcionalidad para temas expandibles
+        document.querySelectorAll('.topic-title').forEach(title => {
+            title.addEventListener('click', function() {
+                // Cerrar todos los demás temas
+                document.querySelectorAll('.topic-title').forEach(t => {
+                    if (t !== this) {
+                        t.classList.remove('active');
+                        t.nextElementSibling.classList.remove('active');
+                    }
+                });
+
+                // Abrir/cerrar el tema actual
+                this.classList.toggle('active');
+                this.nextElementSibling.classList.toggle('active');
             });
         });
     </script>
