@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -165,6 +165,82 @@
             display: block;
         }
 
+        /* Estilos para la hoja de vida */
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .cv-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .cv-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #3498db;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cv-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .cv-section h3 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .cv-item {
+            margin-bottom: 15px;
+        }
+        
+        .cv-item h4 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .cv-item .date {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .objectives-list {
+            margin-left: 20px;
+        }
+        
+        .objectives-list li {
+            margin-bottom: 8px;
+            padding-left: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
@@ -178,6 +254,16 @@
             
             .main-content {
                 margin-top: 140px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .cv-photo {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
@@ -561,11 +647,63 @@
 
         <section id="cv" class="section">
             <h1>Hoja de Vida</h1>
-            <div style="text-align: center;">
-                <h2>Tu Nombre Completo</h2>
-                <p>Ingeniero de Sistemas</p>
-                <p>Email: tu.email@ejemplo.com</p>
-                <p>Teléfono: +57 123 456 7890</p>
+            <div class="cv-container">
+                <div class="cv-header">
+                    <img src="foto-andrea.jpg" alt="Foto de Andrea Gómez" class="cv-photo">
+                    <h2>Andrea Gómez</h2>
+                    <p>Estudiante de Ingeniería de Sistemas</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <strong>📧 Email:</strong> andreagomezyo726@gmail.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>📱 Teléfono:</strong> +57 312 591 0997
+                        </div>
+                        <div class="contact-item">
+                            <strong>📍 Ubicación:</strong> Medellín, Colombia
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Perfil Profesional</h3>
+                    <p>Estudiante de Ingeniería de Sistemas con deseo de fortalecer mis conocimientos en tecnologías de la información. Aunque aún me encuentro en proceso de aprendizaje, tengo disposición para asumir nuevos retos, trabajar en equipo y seguir adquiriendo conocimientos que me permitan crecer profesionalmente.</p>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Objetivos Profesionales</h3>
+                    <ul class="objectives-list">
+                        <li>Completar mi formación como Ingeniera de Sistemas</li>
+                        <li>Contribuir al desarrollo de soluciones tecnológicas innovadoras</li>
+                        <li>Continuar aprendiendo nuevas tecnologías y metodologías</li>
+                        <li>Desarrollar habilidades técnicas y blandas para el éxito profesional</li>
+                        <li>Aplicar mis conocimientos en proyectos que generen impacto positivo</li>
+                    </ul>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Educación</h3>
+                    <div class="cv-item">
+                        <h4>Universidad Católica Luis Amigó</h4>
+                        <p class="date">2025 - Actualidad</p>
+                        <p>Ingeniería de Sistemas</p>
+                    </div>
+                    <div class="cv-item">
+                        <h4>Institución Educativa Luis Lopez de Mesa</h4>
+                        <p class="date">2011 - 2022</p>
+                        <p>Bachiller Académico</p>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Habilidades</h3>
+                    <ul class="objectives-list">
+                        <li><strong>Técnicas:</strong> Conocimientos básicos en programación, sistemas operativos y redes</li>
+                        <li><strong>Personales:</strong> Trabajo en equipo, adaptabilidad, aprendizaje rápido</li>
+                        <li><strong>Idiomas:</strong> Español (nativo), Inglés (básico)</li>
+                        <li><strong>Herramientas:</strong> Microsoft Office, herramientas colaborativas</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
@@ -603,4 +741,4 @@
     </script>
 </body>
 </html>
-            
+        
