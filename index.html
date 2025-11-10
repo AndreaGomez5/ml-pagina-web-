@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniería de Sistemas - Unidades Académicas</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Navegación principal */
+        .main-nav {
+            background-color: #2c3e50;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .nav-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Contenido principal */
+        .main-content {
+            margin-top: 80px;
+            padding: 20px 5%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section {
+            display: none;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 25px;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 20px;
+            color: #3498db;
+        }
+        
+        .unit-list {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .unit-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">Ingeniería de Sistemas</div>
+            <div class="nav-buttons">
+                <button class="nav-btn" data-section="units">Unidades</button>
+                <button class="nav-btn" data-section="crud">Función CRUD</button>
+                <button class="nav-btn" data-section="cv">Hoja de Vida</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="units" class="section active">
+            <h1>Unidades Académicas</h1>
+            
+            <h2>UNIDAD 1: FUNDAMENTOS Y EL PENSAMIENTO SISTÉMICO</h2>
+            <ul class="unit-list">
+                <li>1.1. ¿Qué es la ingeniería?</li>
+                <li>1.2. Historia y evolución de la ingeniería de sistemas</li>
+                <li>1.3. Ingeniería de sistemas vs. otras ramas de la ingeniería</li>
+                <li>1.4. ¿Qué problemas resuelve la ingeniería de sistemas?</li>
+                <li>1.5. Enfoque de resolución de problemas y pensamiento sistémico</li>
+                <li>1.6. Introducción al modelado y diagramas de flujo</li>
+                <li>1.7. Conceptos fundamentales de la Teoría General de Sistemas (TGS)</li>
+                <li>1.8. Componentes del sistema y tipos de sistemas de información</li>
+                <li>1.9. La empresa como sistema</li>
+            </ul>
+            
+            <h2>UNIDAD 2: EL INGENIERO DE SISTEMAS EN CONTEXTO EMPRESARIAL Y SOCIAL</h2>
+            <ul class="unit-list">
+                <li>2.1. El ingeniero de sistemas amigoniano</li>
+                <li>2.2. Perfil del ingeniero amigoniano</li>
+                <li>2.3. Perfiles y roles ocupacionales del ingeniero de sistemas</li>
+                <li>2.4. Impacto social de la tecnología</li>
+                <li>2.6. Netiqueta y comunicación profesional digital</li>
+                <li>2.7. Gestión de archivos y ofimática como herramientas básicas</li>
+            </ul>
+            
+            <h2>UNIDAD 3: EVOLUCIÓN DE LAS TIC Y SISTEMAS INFORMÁTICOS</h2>
+            <ul class="unit-list">
+                <li>3.1. Las TIC desde el punto de vista del ingeniero de sistemas</li>
+                <li>3.2. Introducción a los sistemas computacionales como sistema</li>
+                <li>3.3. Evolución del hardware y el software en los últimos 20 años</li>
+                <li>3.4. Inteligencia Artificial: conceptos básicos y tendencias</li>
+                <li>3.5. Mirada actual de los sistemas de información</li>
+            </ul>
+        </section>
+
+        <section id="crud" class="section">
+            <h1>Función CRUD</h1>
+            <p>Esta funcionalidad estará disponible pronto.</p>
+        </section>
+
+        <section id="cv" class="section">
+            <h1>Hoja de Vida</h1>
+            <div style="text-align: center;">
+                <h2>Tu Nombre Completo</h2>
+                <p>Ingeniero de Sistemas</p>
+                <p>Email: tu.email@ejemplo.com</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.nav-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const sectionId = this.getAttribute('data-section');
+                
+                document.querySelectorAll('.section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
